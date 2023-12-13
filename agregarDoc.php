@@ -20,41 +20,6 @@
                         <label for="txtCel">No Cedula</label>
                         <input type="text" class="form-control" id="txtCel" name="txtCel" require>
                         <button class="btn btn-primary mt-3"><i class="fa-solid fa-floppy-disk"></i> Agregar</button>
-
-                        <table class="table table-sm table-hover table-bordered">
-                            <thead>
-                                <!--<th>id</th>-->
-                                <th>Nombre Doctor</th>
-                                <th>Cedula</th>
-                            </thead>
-                            <?php 
-                            foreach($datos as $item) {
-                        ?>
-                            <tbody>
-                                <tr>
-                                    <td> <?php echo isset($item->nombreDoc) ? $item->nombreDoc : ''; ?> </td>
-                                    <td> <?php echo isset($item->cedula) ? $item->cedula : ''; ?> </td>
-                                    <td class="text-center">
-                                        <form action="./actualizarDoc.php" method="POST">
-
-                                            <input type="hidden" name="id" value="<?php echo $item->_id ?>">
-                                            <button class="btn btn-warning">
-                                                <i class="fa-solid fa-user-pen"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                    <td class="text-center">
-                                        <form action="./eliminarDoc.php" method="POST">
-                                            <input type="hidden" name="id" value="<?php echo $item->_id ?>">
-                                            <button class="btn btn-danger">
-                                                <i class="fa-solid fa-user-xmark"></i>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
                         <div>
                             <div class="mt-3">
                                 <a href="index.php" class="btn btn-outline-info"> <i
