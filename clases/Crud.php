@@ -1,6 +1,5 @@
 <?php
-//require_once './Conexion.php';
-//require_once './vendor/autoload.php';
+
 
 class Crud extends Conexion {
     public function mostrarDatos() {
@@ -14,6 +13,7 @@ class Crud extends Conexion {
             return $th->getMessage(); // En caso de error, devuelve el mensaje de error
         }
     }
+
     public function obtenerDocumento($id) {
         try {
             $conexion = Conexion::conectar();
@@ -111,6 +111,34 @@ class Crud extends Conexion {
                                         [
                                             '$set' => $datos    
                                         ]
+                                    );
+            return $respuesta;
+        } catch (\Throwable $th) {
+            return $th->getMessage();
+        }
+    }
+    
+    public function tieneRelacion($id){
+        // Conecta a la base de datos (ajusta esto según tu implementación)
+        $conexion = Conexion::conectar();
+
+        // Verifica en otras colecciones si hay referencias al documento con el ID proporcionado
+        $referencias = $conexion->paciente->countDocuments(['id_doctor' => $id]);
+
+        // Cierra la conexión (ajusta esto según tu implementación)
+        
+        // Devuelve true si hay referencias, false si no las hay
+        return $referencias > 0;
+    }
+
+    public function eliminarDoc($id) {
+        try {
+            $conexion = Conexion::conectar();
+            $coleccion = $conexion->doctor;
+            $respuesta = $coleccion->deleteOne(
+                                        array(
+                                            "_id" => new MongoDB\BSON\ObjectId($id)
+                                        )
                                     );
             return $respuesta;
         } catch (\Throwable $th) {

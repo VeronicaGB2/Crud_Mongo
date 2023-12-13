@@ -16,13 +16,13 @@
 
                     <form action="./procesos/insertDoc.php" method="post">
                         <label for="txtNnombre">Nombre del Doctor</label>
-                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" require>
+                        <input required type="text" class="form-control" id="txtNombre" name="txtNombre" require>
                         <label for="txtCel">No Cedula</label>
-                        <input type="text" class="form-control" id="txtCel" name="txtCel" require>
+                        <input required type="text" class="form-control" id="txtCel" name="txtCel" require>
                         <button class="btn btn-primary mt-3"><i class="fa-solid fa-floppy-disk"></i> Agregar</button>
                         <div>
                             <div class="mt-3">
-                                <a href="index.php" class="btn btn-outline-info"> <i
+                                <a href="indexDoc.php" class="btn btn-outline-info"> <i
                                         class="fa-solid fa-angles-left"></i> Regresar</a>
                             </div>
 

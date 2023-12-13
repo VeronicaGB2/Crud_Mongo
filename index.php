@@ -13,12 +13,12 @@
         <div class="col">
             <div class="card mt-4">
                 <div class="card-body">
-                    <h2>Crud con MongoDB y PhP</h2>
+                    <h2>Proyecto final</h2>
                     <a href="./agregar.php" class="btn btn-primary">
                         <i class="fa-solid fa-user-plus"></i> Agregar nuevo registro
                     </a>
-                    <a href="./agregarDoc.php" class="btn btn-primary">
-                        <i class="fa-solid fa-user-plus"></i> Agregar un Doctor
+                    <a href="./indexDoc.php" class="btn btn-primary">
+                        <i class="fa-solid fa-user-plus"></i> Doctores
                     </a>
                     <hr>
                     <table class="table table-sm table-hover table-bordered">

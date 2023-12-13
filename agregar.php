@@ -9,17 +9,17 @@
 
                     <form action="./procesos/insertar.php" method="post">
                     <label for="txtNnombre">Nombre del Paciente</label>
-                    <input type="text" class="form-control" id="txtNombre" name="txtNombre" require>
+                    <input type="text" class="form-control" id="txtNombre" name="txtNombre" required>
                     <label for="txtMes">Mes Nacimiento</label>
-                    <input type="text" class="form-control" id="txtMes" name="txtMes" require>
+                    <input type="text" class="form-control" id="txtMes" name="txtMes" required>
                     <label for="txtPeso">Peso</label>
-                    <input type="text" class="form-control" id="txtPeso" name="txtPeso" require>
+                    <input type="text" class="form-control" id="txtPeso" name="txtPeso" required>
                     <label for="txtEstatura">Estatura</label>
-                    <input type="text" class="form-control" id="txtEstatura" name="txtEstatura" require>
+                    <input type="text" class="form-control" id="txtEstatura" name="txtEstatura" required>
                     <label for="txtSangre">Tipo de Sangre</label>
-                    <input type="text" class="form-control" id="txtSangre" name="txtSangre" require>
+                    <input type="text" class="form-control" id="txtSangre" name="txtSangre" required>
                     <label for="txtnoReceta">No. de Receta</label>
-                    <input type="text" class="form-control" id="txtnoReceta" name="txtnoReceta" require>
+                    <input type="text" class="form-control" id="txtnoReceta" name="txtnoReceta" required>
                     
                     <button class="btn btn-primary mt-3"><i class="fa-solid fa-floppy-disk"></i> Agregar</button>
                     <div>
